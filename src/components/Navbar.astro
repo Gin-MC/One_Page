@@ -1,10 +1,40 @@
-<nav class="fixed top-0 left-0 w-full bg-white shadow z-50 flex justify-between items-center px-6">
-  <h1 class="text-2xl font-bold p-4">Gino Cotos</h1>
-  <ul class="flex justify-center gap-6 p-4">
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#sobremi">Sobre mí</a></li>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#contacto">Contacto</a></li>
+<nav class="fixed top-0 left-0 w-full bg-[#363753] shadow z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold text-white">Gino Cotos</h1>
+
+    <!-- Botón hamburguesa -->
+    <button id="menu-btn" class="text-white lg:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Menú de navegación -->
+    <ul id="menu" class="hidden lg:flex gap-6 text-white text-lg transition-all duration-300 ease-in-out">
+      <li><a href="#inicio" class="hover:text-[#5CD2C6] transition-colors duration-300">Inicio</a></li>
+      <li><a href="#sobremi" class="hover:text-[#5CD2C6] transition-colors duration-300">Sobre mí</a></li>
+      <li><a href="#proyectos" class="hover:text-[#5CD2C6] transition-colors duration-300">Proyectos</a></li>
+      <li><a href="#contacto" class="hover:text-[#5CD2C6] transition-colors duration-300">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- Menú mobile -->
+  <ul id="mobile-menu" class="lg:hidden hidden flex-col bg-[#363753] text-white px-6 pb-4">
+    <li><a href="#inicio" class="block py-2 hover:text-[#5CD2C6]">Inicio</a></li>
+    <li><a href="#sobremi" class="block py-2 hover:text-[#5CD2C6]">Sobre mí</a></li>
+    <li><a href="#proyectos" class="block py-2 hover:text-[#5CD2C6]">Proyectos</a></li>
+    <li><a href="#contacto" class="block py-2 hover:text-[#5CD2C6]">Contacto</a></li>
   </ul>
 </nav>
-  
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.add('animate-fadeIn');
+  });
+</script>
