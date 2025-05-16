@@ -9,27 +9,26 @@ const {title = 'Gino Cotos'} = Astro.props
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/gcFavi.svg" />
+    <link rel="icon" type="image/svg+xml" href="/GCFavi.svg" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> <!-- Slick CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" /> <!-- AOS CSS -->
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
   </head>
-  <body>
+  <body class="bg-gray-950 text-white font-sans md:grid-cols-2">
     <slot />
     
+    <!-- jQuery -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-    
     <script>
-      // Asegúrate de que el objeto AOS esté completamente cargado
-      window.addEventListener('load', function() {
-        if (typeof window.AOS !== "undefined") {
-          window.AOS.init({
-            duration: 1000,  // duración de la animación
-            once: true       // solo animar una vez
-          });
-        }
-      });
+      AOS.init();
     </script>
   </body>
-</html>
+  </html>
+
+  

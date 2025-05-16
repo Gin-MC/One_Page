@@ -4,9 +4,10 @@
 	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
-	.st1{font-family:'Elephant-Regular';}
-	.st2{font-size:18px;}
+	.st1{fill:#00BCD4;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+	.st2{font-family:'Elephant-Regular';}
+	.st3{font-size:18px;}
 </style>
 <rect x="0.36" y="9.92" class="st0" width="30.64" height="22.08"/>
-<text transform="matrix(1 0 0 1 0.3569 23.043)" class="st1 st2">GC</text>
+<text transform="matrix(1 0 0 1 0.3569 23.043)" class="st1 st2 st3">GC</text>
 </svg>
