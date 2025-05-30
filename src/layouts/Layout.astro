@@ -1,34 +1,44 @@
 ---
 import './src/styles/global.css'
 
-const {title = 'Gino Cotos'} = Astro.props
+const { title = 'Gino Cotos' } = Astro.props
 ---
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/GCFavi.svg" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> <!-- Slick CSS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" /> <!-- AOS CSS -->
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon1.png" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-zinc-800 text-white font-sans md:grid-cols-2">
+		<nav>
+			<slot name="nav" />
+		</nav>
+		<main>
+			<section>
+				<slot name="hero"/>
+			</section>
+			<section>
+				<slot name="sobre-mi"/>
+			</section>
+			<section>
+				<slot name="proyectos"/>
+			</section>
+			<section>
+				<slot name="contacto"/>
+			</section>
+		</main>
+		<footer>
+			<slot name="footer"/>
+		</footer>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+		<script>
+			AOS.init();
+		</script>
+		</body>
+	</html>
 
-  </head>
-  <body class="bg-gray-950 text-white font-sans md:grid-cols-2">
-    <slot />
-    
-    <!-- jQuery -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <!-- Slick JS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
-  </html>
-
-  
